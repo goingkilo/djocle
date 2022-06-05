@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello World!</h1>
+<p>Welcome to my first Django project!</p>
+
+<h1>Content of my forever todo list(s)</h1>
+
+<table border="1" style="margin-left:100px">
+    {% for x in mymembers %}
+    <tr style="padding:10px">
+        <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+        <td>{{ x.name }}</td>
+        <td>{{ x.desc}}</td>
+        <td><a href="delete/{{ x.id }}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p>
+    <a href="add/">Add Item</a>
+</p>
+
+</body>
+</html>

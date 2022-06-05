@@ -1,0 +1,12 @@
+<h1>Update item</h1>
+
+<form action="updaterecord/{{ mypic.id }}" method="post">
+    {% csrf_token %}
+    First Name:<br>
+    <input name="name" value="{{ mypic.name }}">
+    <br><br>
+    Last Name:<br>
+    <input name="desc" value="{{ mypic.desc }}">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
