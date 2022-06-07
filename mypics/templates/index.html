@@ -7,6 +7,14 @@
 
 <h1>Content of my forever todo list(s)</h1>
 
+{% block content %}
+    {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+    {% else %}
+        Hi Guest !
+    {% endif %}
+{% endblock %}
+
 <table border="1" style="margin-left:100px">
     {% for x in mymembers %}
     <tr style="padding:10px">
